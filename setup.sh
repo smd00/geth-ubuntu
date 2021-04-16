@@ -6,6 +6,7 @@
 # Cheat sheet: https://medium.com/@danielmontoyahd/cheat-sheet-parity-and-bitcoin-core-c370163fca44
 
 # Usage:
+# git clone https://github.com/smd00/geth-ubuntu.git && cd geth-ubuntu
 # sudo chmod +x ./setup.sh
 # ./setup.sh
 
