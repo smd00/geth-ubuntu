@@ -1,0 +1,9 @@
+[Eth]
+SyncMode = "light"
+[Node]
+DataDir = "/dmdata/.ethereum"
+IPCPath = "geth.ipc"
+HTTPHost = "127.0.0.1"
+HTTPPort = 5011
+HTTPVirtualHosts = ["localhost"]
+HTTPModules = ["eth", "web3", "debug", "txpool", "net", "admin", "debug"]
