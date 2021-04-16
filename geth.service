@@ -7,7 +7,7 @@ After=network.target
 # picks up users default config.toml in /dmdata
 User=ubuntu
 Group=ubuntu
-ExecStart=/usr/bin/geth --config /dmdata/config.toml console 2>> /dmdata/.ethereum/geth.log
+ExecStart=/usr/bin/geth --config /dmdata/config.toml
 Restart=on-failure
 
 # Specifies which signal to use when killing a service. Defaults to SIGTERM.
