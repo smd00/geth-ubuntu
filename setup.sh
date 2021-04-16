@@ -45,23 +45,19 @@ echo "# SMD00    Install Geth"
 echo "# END   -----------------------------------------------------------------"
 sudo apt-get install ethereum -y
 
-# echo "# START -----------------------------------------------------------------"
-# echo "# SMD00    Copy parity.service and config.toml"
-# echo "# END   -----------------------------------------------------------------"
-# sudo mkdir /dmdata/io.parity.ethereum
-# sudo mkdir -p $HOME/.local/share/io.parity.ethereum/
-# cat $HOME/parity.service | sudo tee /etc/systemd/system/parity.service
-# cat $HOME/config.toml | sudo tee $HOME/.local/share/io.parity.ethereum/config.toml
+echo "# START -----------------------------------------------------------------"
+echo "# SMD00    Copy geth.service and config.toml"
+echo "# END   -----------------------------------------------------------------"
 
-# sudo chmod +x /etc/systemd/system/parity.service
+cat $HOME/geth.service | sudo tee /etc/systemd/system/geth.service
+cat $HOME/config.toml | sudo tee /dmdata/config.toml
 
-# sudo chown -R ubuntu:ubuntu /dmdata
+sudo chmod +x /etc/systemd/system/geth.service
 
-# echo "# START -----------------------------------------------------------------"
-# echo "# SMD00    Enable and start parity"
-# echo "# END   -----------------------------------------------------------------"
-# sudo systemctl enable parity
-# sudo systemctl start parity
+sudo chown -R ubuntu:ubuntu /dmdata
 
-# sudo systemctl status parity
-# journalctl -f -u parity.service
+echo "# START -----------------------------------------------------------------"
+echo "# SMD00    Enable and start geth"
+echo "# END   -----------------------------------------------------------------"
+sudo systemctl enable geth
+sudo systemctl start geth
