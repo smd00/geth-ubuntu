@@ -50,8 +50,8 @@ echo "# START -----------------------------------------------------------------"
 echo "# SMD00    Copy geth.service and config.toml"
 echo "# END   -----------------------------------------------------------------"
 
-cat $HOME/geth.service | sudo tee /etc/systemd/system/geth.service
-cat $HOME/config.toml | sudo tee /dmdata/config.toml
+cat $HOME/geth-ubuntu/geth.service | sudo tee /etc/systemd/system/geth.service
+cat $HOME/geth-ubuntu/config.toml | sudo tee /dmdata/config.toml
 
 sudo chmod +x /etc/systemd/system/geth.service
 
